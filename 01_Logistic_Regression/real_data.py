@@ -131,9 +131,9 @@ train_accuracy = np.mean(train_labels == y_train)
 
 # Test predictions
 test_probs = forward(X_test_scaled, W, b)
-test_labels = (test_probs >= 0.5).astype(int)
+test_pred_labels = (test_probs >= 0.5).astype(int)
 
-test_accuracy = np.mean(test_labels == y_test)
+test_accuracy = np.mean(test_pred_labels == y_test)
 
 print("\n===== Final Results =====")
 print(f"Train Accuracy: {train_accuracy * 100:.2f}%")
@@ -148,19 +148,19 @@ print(f"Test Accuracy: {test_accuracy * 100:.2f}%")
 
 # True Positive:
 # Actual = 0, Predicted = 0
-TP = np.sum((y_test == 0) & (test_labels == 0))
+TP = np.sum((y_test == 0) & (test_pred_labels == 0))
 
 # True Negative:
 # Actual = 1, Predicted = 1
-TN = np.sum((y_test == 1) & (test_labels == 1))
+TN = np.sum((y_test == 1) & (test_pred_labels == 1))
 
 # False Positive:
 # Actual = 1, Predicted = 0
-FP = np.sum((y_test == 0) & (test_labels == 1))
+FP = np.sum((y_test == 1) & (test_pred_labels == 0))
 
 # False Negative:
 # Actual = 0, Predicted = 1
-FN = np.sum((y_test == 1) & (test_labels == 0))
+FN = np.sum((y_test == 0) & (test_pred_labels == 1))
 
 print("\n===== Confusion Matrix =====")
 print("TP:", TP)
