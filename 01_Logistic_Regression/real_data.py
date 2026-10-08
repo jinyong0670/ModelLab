@@ -167,3 +167,19 @@ print("TP:", TP)
 print("TN:", TN)
 print("FP:", FP)
 print("FN:", FN)
+
+
+# ==================================
+# Step 9. Evaluation Metrics
+# ==================================
+
+precision = TP / (TP + FP)
+
+recall = TP / (TP + FN)
+
+f1 = 2 * precision * recall / (precision + recall)
+
+print("\n===== Evaluation Metrics =====")
+print(f"Precision: {precision:.4f}")
+print(f"Recall: {recall:.4f}")
+print(f"F1-score: {f1:.4f}")
