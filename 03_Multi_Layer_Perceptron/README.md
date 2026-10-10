@@ -68,7 +68,7 @@ Z_1 = XW_1 + b_1
 $$
 
 $$
-A_1 = \operatorname{ReLU}(Z_1)
+A_1 = \mathrm{ReLU}(Z_1)
 $$
 
 $$
@@ -76,7 +76,7 @@ Z_2 = A_1W_2 + b_2
 $$
 
 $$
-\hat{Y} = \operatorname{Softmax}(Z_2)
+\hat{Y} = \mathrm{Softmax}(Z_2)
 $$
 
 ### Activation Functions
@@ -84,13 +84,13 @@ $$
 ReLU introduces nonlinearity into the hidden layer.
 
 $$
-\operatorname{ReLU}(x) = \max(0,x)
+\mathrm{ReLU}(x) = \max(0,x)
 $$
 
 Softmax converts the output logits into class probabilities.
 
 $$
-\operatorname{Softmax}(z)_i =
+\mathrm{Softmax}(z)_i =
 \frac{e^{z_i}}{\sum_{j=1}^{C}e^{z_j}}
 $$
 
@@ -159,7 +159,7 @@ $$
 The element-wise derivative of ReLU is applied:
 
 $$
-dZ_1 = dA_1 \odot \operatorname{ReLU}'(Z_1)
+dZ_1 = dA_1 \odot \mathrm{ReLU}'(Z_1)
 $$
 
 where \(\odot\) denotes element-wise multiplication.
