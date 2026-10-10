@@ -208,15 +208,11 @@ $$
 The relative difference between analytical and numerical gradients is calculated as:
 
 $$
-\mathrm{Relative\ Error}
-=
+\mathrm{Relative\ Error} =
 \frac{
-|g_{\mathrm{numerical}}-g_{\mathrm{analytical}}|
+|g_{\mathrm{numerical}} - g_{\mathrm{analytical}}|
 }{
-\max\left(
-10^{-8},
-|g_{\mathrm{numerical}}|+|g_{\mathrm{analytical}}|
-\right)
+\max\left(10^{-8}, |g_{\mathrm{numerical}}| + |g_{\mathrm{analytical}}|\right)
 }
 $$
 
