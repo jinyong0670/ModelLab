@@ -122,7 +122,7 @@ $$
 W_2 \sim \mathcal{N}\left(0,\frac{1}{n_{\text{hidden}}}\right)
 $$
 
-The second argument of \(\mathcal{N}\) represents the variance.
+The second argument of $\mathcal{N}$ represents the variance.
 
 ---
 
@@ -162,7 +162,7 @@ $$
 dZ_1 = dA_1 \odot \mathrm{ReLU}'(Z_1)
 $$
 
-where \(\odot\) denotes element-wise multiplication.
+where $\odot$ denotes element-wise multiplication.
 
 The gradients of the first layer are:
 
@@ -182,7 +182,7 @@ $$
 \theta \leftarrow \theta - \eta \nabla_\theta L
 $$
 
-where \(\eta\) is the learning rate.
+where $\eta$ is the learning rate.
 
 ---
 
@@ -208,12 +208,12 @@ $$
 The relative difference between analytical and numerical gradients is calculated as:
 
 $$
-\text{Relative Error}
+\mathrm{Relative\ Error}
 =
 \frac{
-|g_{\text{numerical}}-g_{\text{analytical}}|
+|g_{\mathrm{numerical}}-g_{\mathrm{analytical}}|
 }{
-\max(10^{-8},|g_{\text{numerical}}|+|g_{\text{analytical}}|)
+\max(10^{-8},|g_{\mathrm{numerical}}|+|g_{\mathrm{analytical}}|)
 }
 $$
 
