@@ -213,7 +213,10 @@ $$
 \frac{
 |g_{\mathrm{numerical}}-g_{\mathrm{analytical}}|
 }{
-\max(10^{-8},|g_{\mathrm{numerical}}|+|g_{\mathrm{analytical}}|)
+\max\left(
+10^{-8},
+|g_{\mathrm{numerical}}|+|g_{\mathrm{analytical}}|
+\right)
 }
 $$
 
